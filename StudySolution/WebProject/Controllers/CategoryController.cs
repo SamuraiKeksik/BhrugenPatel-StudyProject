@@ -93,7 +93,7 @@ namespace WebProject.Controllers
                 return NotFound();
             }
             TempData["success"] = "The category is deleted";
-            _db.Categories.Remove(obj);
+            _db.Categories.Remove(categoryFromDb);
             _db.SaveChanges();
             return RedirectToAction("Index");            
         }
